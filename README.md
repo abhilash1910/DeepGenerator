@@ -9,7 +9,7 @@ softmax cross entropy loss ,and generalised Adagrad optimizer.
   
     initialisation:  
         
-        import DeepGenerator as dg
+        import DeepGenerator.DeepGenerator as dg
     ====================
     
     creating object:
