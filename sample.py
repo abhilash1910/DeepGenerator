@@ -5,7 +5,7 @@ Created on Fri Apr 10 20:17:00 2020
 @author: User
 """
 
-import DeepGenerator as dg
+import DeepGenerator.DeepGenerator as dg
 
 
 
