@@ -4,6 +4,8 @@ The library is a generative network built purely in numpy and matplotlib. The li
 library for generating n sequence texts from given corpus. Metrics for accuracy-BLEU has provided a considerable accuracy metric
 for epochs greater than 20000.The library is sequential and includes intermediate tanh activation in the intermediate stages with 
 softmax cross entropy loss ,and generalised Adagrad optimizer.
+# Installation:
+pip install DeepGenerator
 
 # library facts:
   
@@ -89,3 +91,6 @@ softmax cross entropy loss ,and generalised Adagrad optimizer.
 # Usage-
 The file sample.py contains the usage specification and syntax for generating text
 Jupyter notebook -Deepgen.ipynb is also present as a sample with different text files.
+
+# Library link:
+https://pypi.org/project/DeepGenerator/0.1/
