@@ -72,8 +72,8 @@ pip install DeepGenerator
                                 learning_rate-learning_rate
                                 step_size-sequence length
                                 hidden_layers-kernel size
-                                Returns epochs and gradient losses vector
-                                Usage-epochs,gradient_loss=deepgen.start_predict(dg.count,dg.epochs,dg.Whh1,dg.Whh_vector,dg.Whh,dg.Why,dg.bh1,dg.bh_vector,dg.bh,dg.by,dg.hid_layer,dg.char_to_idx,dg.idx_to_char,dg.vocab_size,dg.learning_rate,dg.step_size,dg.data,dg.hidden_layers) 
+                                Returns epochs,gradient losses vector and out_txt_vector -vector of putput generated sentences
+                                Usage-epochs,gradient_loss,out_txt_vector=deepgen.start_predict(dg.count,dg.epochs,dg.Whh1,dg.Whh_vector,dg.Whh,dg.Why,dg.bh1,dg.bh_vector,dg.bh,dg.by,dg.hid_layer,dg.char_to_idx,dg.idx_to_char,dg.vocab_size,dg.learning_rate,dg.step_size,dg.data,dg.hidden_layers) 
        7.output_sample function- Takes arguements (self,h1,seed_ix,n,vocab_size,Wh1,Whh_vector,Whh,Why,bh1,bh_vector,bh,by,hid_layer)-
                                 h1-hidden layer previous state
                                 seed_ix-starting point for generation
