@@ -15,7 +15,7 @@ setup(
   author = 'ABHILASH MAJUMDER',
   author_email = 'abhilash.majumder@hsbc.co.in',
   url = 'https://github.com/abhilash1910/DeepGenerator',   
-  download_url = 'https://github.com/abhilash1910/DeepGenerator/archive/v_01.tar.gz',    
+  download_url = 'https://github.com/abhilash1910/DeepGenerator/archive/v_02.tar.gz',    
   keywords = ['sequence_to_sequence', 'text generation', 'sentence generation','generative network','RNN','Vanilla RNN','generation library'],   
   install_requires=[           
 
