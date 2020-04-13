@@ -262,6 +262,7 @@ class DeepGenerator:
         tau=1e-8
         hypo_loss= -np.log(1.0/vocab_size)*step_size
         out_text=""
+        out_txt_vector=[]
         #looping for training
         for j in range(0,epochs):
     
@@ -282,6 +283,7 @@ class DeepGenerator:
                 out_txt=' '.join(idx_to_char[i] for i in (sample_ixs))
                 print("==========================")
                 print(out_txt,)
+                out_txt_vector.append(out_txt)
                 print("=========================")
 
             if n%50==0 and n>0:
@@ -305,7 +307,7 @@ class DeepGenerator:
                         raise  ValueError('Error dimensions dont match:dparam and param')   
             p+=step_size
             n+=1
-        return epoch,gradient_loss
+        return epoch,gradient_loss,out_txt_vector
     
 if __name__=='__main__':
     deepgen=DeepGenerator()
@@ -319,8 +321,9 @@ if __name__=='__main__':
     count=100
     data,data_size,vocab_size,char_to_idx,idx_to_char=deepgen.data_preprocess(path,choice)
     hidden_layers,learning_rate,step_size,hid_layer,Wxh,Whh1,Whh_vector,Whh,Why,bh1,bh_vector,bh,by=deepgen.hyperparamteres(hidden_layers_size,no_hidden_layers,learning_rate,step_size,vocab_size)
-    epoch,gradient_loss=deepgen.start_predict(count,epochs,Whh1,Whh_vector,Whh,Why,bh1,bh_vector,bh,by,hid_layer,char_to_idx,idx_to_char,vocab_size,learning_rate,step_size,data,hidden_layers)
+    epoch,gradient_loss,out_txt_vector=deepgen.start_predict(count,epochs,Whh1,Whh_vector,Whh,Why,bh1,bh_vector,bh,by,hid_layer,char_to_idx,idx_to_char,vocab_size,learning_rate,step_size,data,hidden_layers)
     print(gradient_loss)
+    print(out_txt_vector)
     deepgen.plot_loss(epoch,gradient_loss)
     
 
