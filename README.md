@@ -1,22 +1,30 @@
-# DeepGenerator
+# DeepGenerator :pushpin:
 Sentence Sequence Transduction Library (Seq to Seq) for text generation using sequential generative Vanilla RNN using numpy  
 The library is a generative network built purely in numpy and matplotlib. The library is a sequence to sequence transduction
 library for generating n sequence texts from given corpus. Metrics for accuracy-BLEU has provided a considerable accuracy metric
 for epochs greater than 20000.The library is sequential and includes intermediate tanh activation in the intermediate stages with 
 softmax cross entropy loss ,and generalised Adagrad optimizer.
 # Installation:
+
+```python
 pip install DeepGenerator
+```
 
 # library facts:
+
+initialization:  
+```python
   
-    initialisation:  
         
-        import DeepGenerator.DeepGenerator as dg
-    ====================
-    
-    creating object:
-        deepgen=dg.DeepGenerator()
-    
+import DeepGenerator.DeepGenerator as dg
+```        
+Object Creation:
+
+```python
+deepgen=dg.DeepGenerator()
+```
+
+
 # Functions: 
      1.attributes for users- learning rate,epochs,local path of data storage(text format),number of hidden layers,kernel size,sequence/step size,count of next words
       2.data_abstract function- Takes arguements (self,path,choice) - 
